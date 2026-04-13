@@ -4,4 +4,48 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "lightgbm>=4.6.0",
+    "networkx>=3.6.1",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "statsmodels>=0.14.6",
+    "xgboost>=3.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.10",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F", # basic lint
+    "I", # import sorting
+    "D", # docstring rules
+    "B", # bugbear
+    "UP", # pyupgrade
+    "SIM", # simplify
+    "RET", # return style
+    "C4", # comprehensions
+    "PIE", # misc improvements
+    "RSE", # raise correctness
+    "A", # builtins shadowing
+    "ARG", # unused arguments
+    "PTH", # use pathlib
+    "T20", # ban print
+    "TRY", # exceptions
+    "Q", # quote style
+    "COM", # trailing commas
+    "ANN", # type annotations
+    "ERA", # commented out code
+    "PT", # pytest style
+    "S", # bandit-lite security
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
